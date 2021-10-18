@@ -9,7 +9,7 @@ namespace XamarinCal.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Calculator";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
         }
 
