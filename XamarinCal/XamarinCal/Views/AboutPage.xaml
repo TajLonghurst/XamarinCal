@@ -19,41 +19,41 @@
         <Grid Grid.Row="0"  Margin="0,0,0,100">
 
             <StackLayout Orientation="Vertical" HorizontalOptions="EndAndExpand" Margin="20,0" VerticalOptions="EndAndExpand">
-                <Label Text="24 + 345 + 20" FontSize="Large" TextColor="{StaticResource PrimaryColor}" ></Label>
-                <Label TextColor="White"  Text="389" HorizontalOptions="EndAndExpand" FontSize="48"></Label>
+                <Label x:Name="ResultHistory" Text="" FontSize="Large" TextColor="{StaticResource PrimaryColor}" ></Label>
+                <Label x:Name="Result" TextColor="White"  Text="" HorizontalOptions="EndAndExpand" FontSize="48"></Label>
             </StackLayout>
         </Grid>
         <Grid Grid.Row="1"   Margin="0,-100,0,0">
             <StackLayout Orientation="Vertical"  Margin="20">
                 <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" >
-                    <Button  BackgroundColor="#2B2C31" TextColor="White" WidthRequest="50" HeightRequest="50" FontSize="Title" Text="C" HorizontalOptions="FillAndExpand" ></Button>
-                    <Button Text="/" TextColor="White" BackgroundColor="{StaticResource PrimaryColor}" FontSize="Title" ></Button>
+                    <Button  BackgroundColor="#2B2C31" TextColor="White" WidthRequest="50" HeightRequest="50" FontSize="Title" Text="C" HorizontalOptions="FillAndExpand" Clicked="Button_Clear"></Button>
+                    <Button Text="/" TextColor="White" BackgroundColor="{StaticResource PrimaryColor}" FontSize="Title" Clicked="Button_Divied" ></Button>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" >
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="7" HorizontalOptions="FillAndExpand"  FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="8" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="9" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button  BackgroundColor="{StaticResource PrimaryColor}"  Text="x" TextColor="White" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="7" HorizontalOptions="FillAndExpand"  FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Seven"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="8" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Eight"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="9" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Nine"></Button>
+                    <Button  BackgroundColor="{StaticResource PrimaryColor}"  Text="x" TextColor="White" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Multiply"></Button>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand"  >
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="4" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="5" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="6" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button  BackgroundColor="{StaticResource PrimaryColor}"  Text="-" TextColor="White" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="4" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Four"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="5" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Five"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="6" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Six"></Button>
+                    <Button  BackgroundColor="{StaticResource PrimaryColor}"  Text="-" TextColor="White" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Minus"></Button>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" >
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="1" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="2" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="3" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
-                    <Button  BackgroundColor="{StaticResource PrimaryColor}"  Text="+" TextColor="White"  HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="1" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_One"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="2" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Two"></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="3" HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Three"></Button>
+                    <Button BackgroundColor="{StaticResource PrimaryColor}" Text="+" TextColor="White"  HorizontalOptions="FillAndExpand" FontSize="Title" WidthRequest="50" HeightRequest="50" Clicked="Button_Plus"></Button>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" >
-                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="0" FontSize="Title" ></Button>
-                    <Button  Text="="  TextColor="White" BackgroundColor="{StaticResource PrimaryColor}"  HorizontalOptions="FillAndExpand" FontSize="Title" ></Button>
+                    <Button TextColor="White" BackgroundColor="#2B2C31"  Text="0" FontSize="Title" Clicked="Button_Zero" ></Button>
+                    <Button  Text="="  TextColor="White" BackgroundColor="{StaticResource PrimaryColor}"  HorizontalOptions="FillAndExpand" FontSize="Title" Clicked="Button_Equal" ></Button>
                 </StackLayout>
 
             </StackLayout>
