@@ -42,7 +42,7 @@ namespace XamarinCal.Views
         private void Button_Multiply(object sender, EventArgs e)
         {
             operand1 = input;
-            operation = '*';
+            operation = 'x';
             input = string.Empty;
         }
 
@@ -51,7 +51,8 @@ namespace XamarinCal.Views
             Result.Text = "";
             operand1 = 0.ToString();
             operand2 = 0.ToString();
-            Answer.ToString();
+            Answer = 0;
+            ResultHistory.Text = "";
         }
         private void Button_Equal(object sender, EventArgs e)
         {
@@ -91,6 +92,7 @@ namespace XamarinCal.Views
                 }
 
             }
+            input = "";
         }
 
 
@@ -153,7 +155,7 @@ namespace XamarinCal.Views
         {
             this.Result.Text = "";
             input += "9";
-            this.Result.Text += input; Result.Text = Result.Text + "9";
+            this.Result.Text += input;
         }
     }
 }
